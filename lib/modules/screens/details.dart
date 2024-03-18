@@ -20,11 +20,14 @@ class _ReviewDetailsState extends State<ReviewDetails> {
         }, icon: const Icon(Icons.arrow_back)),
         title: Text(AppLocalizations.of(context)!.reviewDetails),
         actions: [
-          IconButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              icon: const Icon(Icons.delete_outline))
+          Padding(
+            padding: const EdgeInsets.only(right: 8.0),
+            child: IconButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: const Icon(Icons.delete_outline)),
+          )
         ],
       ),
       body: const Placeholder(),
