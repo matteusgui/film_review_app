@@ -1,4 +1,7 @@
 {
     "@@locale": "es",
-    "helloWorld": "Hola Mundo!"
+    "helloWorld": "Hola Mundo!",
+    "myReviews":"Mi revisiones",
+    "addReview":" Add Review",
+    "reviewDetails": "Review Details"
 }

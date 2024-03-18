@@ -3,5 +3,17 @@
     "helloWorld": "Hello World",
     "@helloWorld": {
         "description": "The conventional newborn programmer greeting"
+    },
+    "myReviews":"My Reviews",
+    "@myReviews": {
+        "description": "The title for the dashboard page"
+    },
+    "addReview":" Add Review",
+    "@adReview":{
+        "description": "The text to appear on add review button as toolTip"
+    },
+    "reviewDetails": "Review Details",
+    "@reviewDetails":{
+        "description": "The AppBar Text for the ReviewDetails page"
     }
 }
