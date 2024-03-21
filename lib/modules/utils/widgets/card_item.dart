@@ -1,5 +1,4 @@
 import 'package:film_review_app/modules/domain/entity/review_preview.dart';
-import 'package:film_review_app/modules/screens/details.dart';
 import 'package:flutter/material.dart';
 
 class CardItem extends StatelessWidget {
@@ -13,55 +12,40 @@ class CardItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Row(
       children: [
-        InkWell(
-          onTap: () {
-            // TODO: Implement the navigation function
-            Navigator.push(context, MaterialPageRoute(builder: (context) => ReviewDetails(review: review)));
-          },
-          child: Row(
-            
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      review.filmName,
-                      style: const TextStyle(fontSize: 32),
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                    Text(
-                      review.rating.toString(),
-                      style: const TextStyle(fontSize: 24),
-                    ),
-                    Text(
-                      "Watched at: ${review.watchedDate.day}/${review.watchedDate.month}/${review.watchedDate.year}",
-                    ),
-                    const SizedBox(
-                      height: 8,
-                    ),
-                  ],
-                ),
+              Text(
+                review.filmName,
+                style: const TextStyle(fontSize: 32),
+                overflow: TextOverflow.ellipsis,
               ),
-              IconButton(
-                onPressed: () {
-                  // TODO: Implement deletion
-                  debugPrint("Item $index was deleted");
-                },
-                icon: const Icon(Icons.delete_outline),
+              Text(
+                review.rating.toString(),
+                style: const TextStyle(fontSize: 24),
+              ),
+              Text(
+                "Watched at: ${review.watchedDate.day}/${review.watchedDate.month}/${review.watchedDate.year}",
               ),
               const SizedBox(
-                width: 8,
-              )
+                height: 8,
+              ),
             ],
           ),
         ),
-        const SizedBox(
-          height: 16,
-          child: Divider(),
+        IconButton(
+          onPressed: () {
+            // TODO: Implement deletion
+            debugPrint("Item $index was deleted");
+          },
+          icon: const Icon(Icons.delete_outline),
         ),
+        const SizedBox(
+          width: 8,
+        )
       ],
     );
   }
