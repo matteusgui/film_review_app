@@ -15,5 +15,9 @@
     "reviewDetails": "Review Details",
     "@reviewDetails":{
         "description": "The AppBar Text for the ReviewDetails page"
+    },
+    "newPlant": "New Plant",
+    "@newPlant":{
+        "description": "The text that writes new plant"
     }
 }

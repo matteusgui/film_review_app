@@ -3,5 +3,6 @@
     "helloWorld": "Hola Mundo!",
     "myReviews":"Mi revisiones",
     "addReview":" Add Review",
-    "reviewDetails": "Review Details"
+    "reviewDetails": "Review Details",
+    "newPlant": "Nueva planta"
 }
